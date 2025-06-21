@@ -1,0 +1,17 @@
+<div class="content-container" appDisableRightClick>
+  <div class="move">
+    <div class="background-content" [ngStyle]="{'opacity': backgroundOpacity}">
+      <div class="gifvideo" #gifVideo [ngStyle]="{'visibility': hideContent ? 'hidden' : 'visible'}">
+        <div class="sequence-container" #sequenceContainer>
+          <img [src]="currentFrameSrc" alt="Sequence Frame" />
+        </div>
+        <div class="overlay-content" [ngStyle]="{'visibility': hideContent ? 'hidden' : 'visible'}">
+          <img src="https://ecgbxovmuzarmmuhyzyo.supabase.co/storage/v1/object/public/phase1/gif/Elephant%20Video%200100_1.gif?t=2025-01-15T11%3A00%3A40.656Z" alt="Centered GIF" />
+        </div>
+      </div>
+    </div>
+    <div class="mask-layer" [ngStyle]="{'clip-path': clipPathStyle}">
+      <app-particals></app-particals>
+    </div>
+  </div>
+</div>

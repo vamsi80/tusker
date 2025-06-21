@@ -1,0 +1,33 @@
+<a href="/capabilities" class="back-button">
+  <span class="arrow">←</span>
+</a>
+<div class="hero-section">
+  <div class="hero-content">
+    <h1>Physical Space</h1>
+    <p>We integrate Customer Experience Center, Interiors, and Events & Expo services to transform your physical spaces.
+    </p>
+  </div>
+</div>
+
+<div class="image-container" appDisableRightClick>
+  <div class="image-card" *ngFor="let card of cards" (click)="openPopup(card)">
+    <img [src]="card.img" [alt]="card.title" />
+    <div class="content">
+      <h2>{{ card.title }}</h2>
+    </div>
+  </div>
+</div>
+
+<div class="popup" *ngIf="showPopup">
+  <div class="popup-content">
+    <span class="close-mark" (click)="closePopup()">×</span>
+    <h2>{{ selectedCard?.title }}</h2>
+    <p>{{ selectedCard?.text }}</p>
+    <div class="button-container">
+      <a href="/ourwork/physical-space/experience" class="know-more-btn">Know More</a>
+    </div>
+  </div>
+</div>
+
+<app-back-to-top-button></app-back-to-top-button>
+<app-footer></app-footer>

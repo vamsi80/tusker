@@ -1,0 +1,27 @@
+<div class="container">
+  <div class="left">
+    <h1>Offerings</h1>
+    <ul class="title-list">
+      <li *ngFor="let offering of offerings; let i = index" [class.active]="i === selectedIndex">
+        {{ offering.title }}
+      </li>
+    </ul>
+  </div>
+  <div class="right">
+    <div class="moving-text" *ngFor="let offering of offerings; let i = index" [id]="'text' + i">
+      <img [src]="offering.image" alt="Static Image" class="static-image" />
+
+       <!-- <hr class="section-divider" /> -->
+
+      <div class="split-content">
+        <div class="title-side">
+          <h2>{{ offering.title }}</h2>
+        </div>
+        <div class="desc-side">
+          <p>{{ offering.description }}</p>
+          <app-butto buttonText="Know More"></app-butto>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

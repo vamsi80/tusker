@@ -1,0 +1,166 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 900;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 40px;
+  backdrop-filter: blur(10px);
+  background-color: rgba(170, 173, 180, 0.893);
+  font-family: 'Acumin Variable Concept';
+  font-weight: 300;
+  border-bottom: 2px solid black;
+}
+
+/* LOGO OUTSIDE NAV (for desktop) */
+.logo img {
+  height: 50px;
+  display: block;
+}
+
+/* LOGO INSIDE NAV (for mobile) */
+.logo-inside-nav {
+  display: none;
+}
+
+.logo-inside-nav img {
+  height: 50px;
+}
+
+.navigation {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex: 1;
+}
+
+/* NAV LINKS CENTER */
+.nav-links {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  flex: 1;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  font-size: 16px;
+  color: #f4f4f4;
+  transition: color 0.3s ease;
+}
+
+.nav-links li a:hover,
+.nav-links li.active a {
+  color: #ef1145;
+}
+
+.contact-button {
+  display: flex;
+  justify-content: flex-end;
+  flex-shrink: 0;
+}
+
+.contact-button a {
+  background-color: #ef1145;
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* MOBILE STYLES */
+.menu-toggle {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #f4f4f4;
+  z-index: 1001;
+}
+
+@media (max-width: 768px) {
+  header {
+    justify-content: space-between;
+  }
+
+  .logo img {
+    display: block;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .navigation {
+    position: fixed;
+    top: 0;
+    left: 100%;
+    width: 100%;
+    height: 100vh;
+    background-color: #aaaab4;
+    flex-direction: column;
+    justify-content: space-between;
+    /* even vertical spacing */
+    align-items: center;
+    padding: 50px 0;
+    transition: left 0.3s ease-in-out;
+    z-index: 999;
+    display: flex;
+  }
+  
+  .navigation.active {
+    left: 0;
+  }
+
+  .logo-inside-nav {
+    display: block;
+  }
+
+  .nav-links {
+    text-align: center;
+    flex-direction: column;
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+    margin-top: 40px;
+    width: 100%;
+  }
+
+  .nav-links li a {
+    font-size: 16px;
+    color: #f4f4f4;
+    text-decoration: none;
+  }
+
+  .nav-links li.active a {
+    color: #ef1145;
+  }
+
+  .contact-button {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .contact-button a {
+    background-color: #ef1145;
+    color: white;
+    text-decoration: none;
+    padding: 12px 24px;
+    border-radius: 25px;
+    font-size: 16px;
+  }
+}

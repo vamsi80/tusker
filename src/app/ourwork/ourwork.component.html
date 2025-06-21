@@ -1,0 +1,47 @@
+<a href="/home" class="back-button">
+  <span class="arrow">←</span>
+</a>
+<div class="baground">
+  <div class="first">
+    <div class="c-text">
+      <h1>WHAT WE DO,<br>DIFFERENTLY</h1>
+      <p>We will never make the necessary changes in the world if we’re not prepared to take the first step.We lead.
+        We share. We learn.</p>
+    </div>
+    <div class="video">
+      <video autoplay muted loop>
+        <source src="assets/home.mp4" type="video/mp4" appDisableRightClick>
+        Your browser does not support the video tag.
+      </video>
+    </div>
+  </div>
+  <div class="container">
+    <div class="box" (click)="showImages('physical')">
+      <div class="hover" appDisableRightClick>
+        <img src="/assets/physical space.png" alt="Image 1" appDisableRightClick>
+      </div>
+      <h2>Physical Space</h2>
+    </div>
+    <div class="box" (click)="showImages('digital')">
+      <div class="hover" appDisableRightClick>
+        <img src="/assets/BRANDING/EMBASSY/FINAL LOGO.png" alt="Image 2" appDisableRightClick>
+      </div>
+      <h2>Digital Space</h2>
+    </div>
+  </div>
+</div>
+<div #subImagesContainer class="sub-images" *ngIf="activeCategory">
+  <div *ngFor="let img of displayedImages; let i = index" class="sub-image"
+    [ngClass]="{'hovered': hoveredImage === img}" (mouseenter)="hoverImage(img)" (mouseleave)="hoverImage(null)"
+    (click)="navigateTo(i)">
+    <div class="image-container" appDisableRightClick>
+      <img [src]="img.src" alt="Sub Image" appDisableRightClick>
+      <div class="overlay" [ngClass]="{'show': hoveredImage === img}">
+        <h3>{{ img.title }}</h3>
+      </div>
+    </div>
+  </div>
+</div>
+<app-back-to-top-button></app-back-to-top-button>
+<app-footer></app-footer>
+<router-outlet></router-outlet>

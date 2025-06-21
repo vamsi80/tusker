@@ -1,0 +1,32 @@
+/* .cursor-dot {
+  width: 6px;
+  height: 6px;
+  background-color: #ef1146;
+  border-radius: 50%;
+  position: fixed;
+  pointer-events: none;
+  z-index: 999;
+  transition: transform 0.2s, scale 0.2s;
+} */
+
+.cursor-outline {
+  width: 40px;
+  height: 40px;
+  border: 2px solid #ef1146;
+  border-radius: 50%;
+  position: fixed;
+  pointer-events: none;
+  z-index: 999;
+  transition: transform 0.15s, scale 0.15s;
+}
+
+@media (max-width: 768px) {
+  .cursor-dot {
+    display: none;
+  }
+
+  .cursor-outline {
+    display: none;
+  }
+
+}

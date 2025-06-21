@@ -1,0 +1,74 @@
+<div class="all">
+  <div class="hero-section">
+    <div class="hero-content">
+      <h1>
+        <span>The Story of</span>
+        <span class="highlight">Tuskers</span>
+      </h1>
+      <p>
+        Empowering businesses with innovative solutions since 2005. We help
+        companies navigate digital transformation and achieve sustainable
+        growth.
+      </p>
+    </div>
+    <img class="hero-image" src="https://via.placeholder.com/800x600" alt="Hero Image" />
+  </div>
+
+  <div class="our-culture image-bg">
+    <div class="heading">
+      <h1>Our Culture</h1>
+      <p>At White Tusker, our culture is rooted in bold thinking, honest collaboration, and a shared passion for
+        crafting impactful stories that connect and inspire.</p>
+    </div>
+  </div>
+
+  <div class="about-section">
+    <div class="features">
+      <div class="feature" *ngFor="let feature of features">
+        <img [src]="feature.image" [alt]="feature.title" />
+        <div class="feature-content">
+          <h2>{{ feature.title }}</h2>
+          <p>{{ feature.description }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- <div class="popup" *ngIf="selectedMember">
+    <div class="popup-content">
+      <span class="close-button" (click)="closePopup()">×</span>
+      <div class="popup-body">
+        <img [src]="selectedMember.image" [alt]="selectedMember.name" class="popup-image" />
+        <div class="popup-text">
+          <h2>{{ selectedMember.name }}</h2>
+          <p class="role">{{ selectedMember.role }}</p>
+          <p>{{ selectedMember.description }}</p>
+          <p class="more-text">{{ selectedMember.moreText }}</p>
+        </div>
+      </div>
+    </div>
+  </div> -->
+
+  <div class="why-choose-us">
+    <div class="content">
+      <p class="subheading">Why Choose Us</p>
+      <h2 class="main-heading">
+        Our Goal is <br />
+        <span>Giving the Best</span><br />
+      </h2>
+      <p class="description">
+        We create purposeful, culturally rich experiences that blend creativity with strategy—making every brand
+        interaction meaningful and distinct.
+      </p>
+    </div>
+
+    <div class="cards">
+      <div class="card">
+        <img src="/assets/database-icon.svg" alt="Database" />
+      </div>
+      <div class="card">
+        <img src="/assets/performance-icon.svg" alt="Performance" />
+      </div>
+    </div>
+  </div>
+</div>

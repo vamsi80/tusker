@@ -1,0 +1,93 @@
+<main>
+  <div class="container">
+    <h1>Get in Touch</h1>
+    <p>We're here to help and answer any questions you might have</p>
+
+    <form (ngSubmit)="onSubmit()" #contactForm="ngForm">
+      <div class="form-group">
+        <label for="full_name">Full Name*</label>
+        <input
+          type="text"
+          id="full_name"
+          name="full_name"
+          [(ngModel)]="formData.full_name"
+          required
+          #fullName="ngModel"
+        />
+        <div *ngIf="fullName.invalid && fullName.touched" class="error-message">
+          Full Name is required.
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email Address*</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          [(ngModel)]="formData.email"
+          required
+          #email="ngModel"
+        />
+        <div *ngIf="email.invalid && email.touched" class="error-message">
+          Email Address is required.
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="phone">Phone Number</label>
+        <input
+          type="tel"
+          id="phone"
+          name="phone"
+          [(ngModel)]="formData.phone"
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="company">Company Name</label>
+        <input
+          type="text"
+          id="company"
+          name="company"
+          [(ngModel)]="formData.company"
+        />
+      </div>
+
+      <div class="form-group full-width">
+        <label for="service">Service Required</label>
+        <select
+          id="service"
+          name="service"
+          [(ngModel)]="formData.service"
+        >
+          <option value="" disabled selected>Select a service</option>
+          <option *ngFor="let service of services" [value]="service.value">
+            {{ service.label }}
+          </option>
+        </select>
+      </div>
+
+      <div class="form-group full-width">
+        <label for="message">Message</label>
+        <textarea
+          id="message"
+          name="message"
+          rows="6"
+          [(ngModel)]="formData.message"
+          required
+          #message="ngModel"
+        ></textarea>
+        <div *ngIf="message.invalid && message.touched" class="error-message">
+          Message is required.
+        </div>
+      </div>
+
+      <button type="submit" [disabled]="contactForm.invalid">Send Message</button>
+    </form>
+  </div>
+</main>
+
+<!-- <footer>
+  &copy; 2024 TheWhiteTusker. All rights reserved.
+</footer> -->

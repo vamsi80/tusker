@@ -1,0 +1,305 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+.hero-section {
+  background-image: url('/assets/EVENTS/Sunburn 2017/Sunburn1.png');
+  background-size: cover;
+  background-position: center;
+  height: 90vh;
+  color: #fff;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  text-align: left;
+  padding: 20px;
+}
+
+.hero-content h1 {
+  font-size: 6rem;
+  font-family: 'BrandFont';
+  font-weight: bold;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  max-width: 50vw;
+  font-family: 'Acumin Variable Concept';
+}
+.image-container {
+  text-align: center;
+  position: relative;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  background-color: #aaadb4;
+  padding: 50px 0;
+}
+
+.image-container h2{
+  font-size: 1.3rem;
+}
+
+.image-card {
+  width: 20vw;
+  max-width: 100%;
+  height: 400px;
+  position: relative;
+  overflow: hidden;
+  transition: width 0.5s ease;
+  margin: 0 10px;
+  flex: 0 1 auto;
+  cursor: pointer;
+}
+
+.image-card img {
+  width: 100%;
+  height: 400px;
+  opacity: 0.9;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.789);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.popup-content {
+  position: relative;
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  width: 600px;
+  font-family: 'Acumin Variable Concept';
+  text-align: left; 
+}
+
+.popup-content h2 {
+  font-size: 1.3rem;
+}
+
+.popup-content p {
+  margin-bottom: 30px;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.button-container {
+  text-align: right; 
+  margin-top: 10px;
+}
+
+.know-more-btn {
+  background: #ef1146;
+  color: #fff;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  text-decoration: none;
+  font-family: 'Acumin Variable Concept';
+  font-size: 13px;
+  text-align: right;
+  display: inline-block;
+}
+
+.close-mark {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 1.5rem;
+  color: #333;
+  cursor: pointer;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.close-mark:hover {
+  color: #ff0000;
+}
+
+.close-mark {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 1.5rem;
+  color: #333;
+  cursor: pointer;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.close-mark:hover {
+  color: #ff0000;
+}
+.content {
+  position: absolute;
+  bottom: 0;
+  padding: 5px; 
+  width: 100%;
+  color: #ffffff;
+  text-align: left;
+  background: #aaadb436;
+  font-family: 'Acumin Variable Concept';
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+.content,
+h1 {
+  font-family: 'Acumin Variable Concept';
+  font-weight: 450;
+}
+
+.content,
+p {
+  font-weight: 300;
+  margin-top: 3px;
+}
+
+.content button{
+  margin-top: 20px;
+  padding: 10px;
+  color: #fff;
+  background-color: #ef1146;
+  border-radius: 5px;
+  border: none;
+}
+
+a {
+  margin-top: 10px;
+}
+
+.image-card:hover {
+  width: 50vw;
+}
+
+.image-card:hover .content {
+  opacity: 1;
+}
+
+.back-button { 
+  position: fixed;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 15px;
+  background-color: rgba(0, 0, 0, 0.468);
+  color: white;
+  font-family: 'Acumin Variable Concept', sans-serif;
+  font-size: 24px;
+  text-decoration: none;
+  border-radius: 50%; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  width: 60px;
+  height: 60px;
+  box-sizing: border-box;
+  animation: zoomInOut 2s infinite ease-in-out;
+}
+
+.arrow {
+  font-size: 28px; 
+  transition: transform 0.3s ease;
+}
+
+@keyframes zoomInOut {
+  0% {
+    transform: scale(1); 
+  }
+  50% {
+    transform: scale(1.2); 
+  }
+  100% {
+    transform: scale(1); 
+  }
+}
+
+.back-button:hover {
+  background-color: rgba(0, 0, 0, 0.9); 
+}
+
+.back-button:hover .arrow {
+  transform: scale(1.3); 
+}
+
+@media (max-width: 768px) {
+  .hero-section {
+    height: 60vh; 
+    padding: 10px;
+  }
+
+  .hero-content h1 {
+    font-size: 2rem; 
+  }
+
+  .hero-content p {
+    font-size: 1rem; 
+    max-width: 90vw; 
+  }
+
+  .image-container {
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center; 
+  }
+
+  .image-card {
+    width: 80%; 
+    margin: 10px 0; 
+    height: auto; 
+  }
+
+  .image-card img {
+    height: 50vh; 
+  }
+
+  .content {
+    padding: 10px;
+    opacity: 1; 
+  }
+
+  .image-card:hover {
+    width: 100vw; 
+  }
+
+  .image-card:hover .content {
+    opacity: 1;
+  }
+  .content,
+  h1 {
+    font-family: 'Acumin Variable Concept';
+    font-weight: 400;
+    font-size: 12px;
+    color: #fff;
+  }
+  
+  .content,
+  p {
+    font-weight: 350;
+    margin-top: 3px;
+  }
+  .content button {
+    padding: 4px;
+    font-size: 8px;
+  }
+  
+}

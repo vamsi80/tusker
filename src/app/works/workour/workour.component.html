@@ -1,0 +1,123 @@
+<div class="ourwork">
+  <header>
+    <h1>Our Work</h1>
+    <p>
+      Explore our diverse portfolio of innovative solutions across physical and
+      digital spaces, where creativity meets functionality to deliver
+      exceptional experiences.
+    </p>
+  </header>
+
+  <nav>
+    <ul class="menu">
+      <li>
+        <a
+          href="javascript:void(0);"
+          (click)="showCategory('all')"
+          [class.active]="activeCategory === 'all'"
+          >All Projects</a
+        >
+      </li>
+      <li class="dropdown">
+        <a
+          href="javascript:void(0);"
+          (click)="showCategory('physical')"
+          [class.active]="activeCategory === 'physical'"
+          >Physical Space ▾</a
+        >
+        <ul class="submenu">
+          <li>
+            <a
+              href="javascript:void(0);"
+              (click)="showCategory('customer')"
+              [class.active]="activeCategory === 'customer'"
+              >Customer Experience</a
+            >
+          </li>
+          <li>
+            <a
+              href="javascript:void(0);"
+              (click)="showCategory('interiors')"
+              [class.active]="activeCategory === 'interiors'"
+              >Interiors</a
+            >
+          </li>
+          <li>
+            <a
+              href="javascript:void(0);"
+              (click)="showCategory('events')"
+              [class.active]="activeCategory === 'events'"
+              >Events & Expos</a
+            >
+          </li>
+        </ul>
+      </li>
+      <li class="dropdown">
+        <a
+          href="javascript:void(0);"
+          (click)="showCategory('digital')"
+          [class.active]="activeCategory === 'digital'"
+          >Digital Space ▾</a
+        >
+        <ul class="submenu">
+          <li>
+            <a
+              href="javascript:void(0);"
+              (click)="showCategory('brand')"
+              [class.active]="activeCategory === 'brand'"
+              >Brand Solution</a
+            >
+          </li>
+          <li>
+            <a
+              href="javascript:void(0);"
+              (click)="showCategory('immersive')"
+              [class.active]="activeCategory === 'immersive'"
+              >Immersive & Interactive</a
+            >
+          </li>
+          <li>
+            <a
+              href="javascript:void(0);"
+              (click)="showCategory('film')"
+              [class.active]="activeCategory === 'film'"
+              >Film & Content</a
+            >
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+
+  <main class="projects" id="projects-container" appDisableRightClick>
+    <div
+      *ngFor="let project of filteredProjects"
+      class="project"
+      (click)="openPopup(project)"
+    >
+      <img [src]="project.image" [alt]="project.title" loading="lazy" />
+      <h3>{{ project.title }}</h3>
+      <a>{{ project.tag }}</a>
+    </div>
+  </main>
+
+  <!-- <div *ngIf="isVideoGalleryVisible" class="video-gallery-overlay">
+        <div class="video-gallery">
+            <div class="main-video">
+                <video [src]="selectedMainVideo" autoplay controls muted></video>
+            </div>
+            <div class="thumbnail-videos">
+                <video *ngFor="let video of selectedProjectVideos" [src]="video" autoplay muted
+                    (click)="setMainVideo(video)"></video>
+            </div>
+            <button class="close-gallery" (click)="closeVideoGallery()">Close</button>
+        </div>
+    </div> -->
+</div>
+
+<app-projectpopup
+  [images]="selectedImages"
+  [visible]="isModalVisible"
+  (close)="closeModal()"
+></app-projectpopup>
+<app-back-to-top-button></app-back-to-top-button>

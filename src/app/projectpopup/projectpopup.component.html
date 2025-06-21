@@ -1,0 +1,10 @@
+<div class="modal" *ngIf="visible">
+    <div class="modal-content">
+        <span class="close" (click)="closeModal()">&times;</span>
+        <img [src]="images[currentIndex]" alt="Project Image" class="modal-image" appDisableRightClick/>
+        <div class="controls">
+            <button (click)="previousImage()" [disabled]="currentIndex === 0">&larr; Previous</button>
+            <button (click)="nextImage()" [disabled]="currentIndex === images.length - 1">Next &rarr;</button>
+        </div>
+    </div>
+</div>

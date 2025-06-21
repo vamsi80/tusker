@@ -1,0 +1,56 @@
+<a href="/ourwork" class="back-button">
+  <span class="arrow">←</span>
+</a>
+<div class="work-services">
+  <div class="screen">
+    <div class="text">
+      <div class="branding-loop">
+        <h1>PHYSICal-SPaCE</h1>
+        <h1>PHYSICal-SPaCE</h1>
+        <h1>PHYSICal-SPaCE</h1>
+      </div>
+    </div>
+  </div>
+
+  <div class="services">
+    <h1>OUR SERVICES</h1>
+    <p>We offer comprehensive solutions tailored to your needs</p>
+    <div class="services-grid">
+      <div class="service-item" *ngFor="let service of services">
+        <i class="material-icons icon">{{ service.icon }}</i>
+        <h2>{{ service.title }}</h2>
+        <p>{{ service.description }}</p>
+        <button class="navigate-button" (click)="navigateToSection(service.title)">
+          Know More
+        </button>
+      </div>
+    </div>
+  </div>
+
+<div class="block" id="block-section">
+  <div class="projecttext">
+    <P class="project">OUR PROJECTS</P>
+    <h1 class="main-heading">
+      CREATED WITH OUR <br> SKILLED TUSKER <span class="sland">HANDS</span>.
+    </h1>
+  </div>
+  <div class="container">
+    <div *ngFor="let category of categorizedProjects">
+      <h2 [id]="category.id">
+        {{ category.heading }}
+      </h2>
+      <div class="projects" appDisableRightClick>
+        <div class="box" *ngFor="let project of category.projects; let i = index" (click)="openModal(category, i)">
+          <div class="hover">
+            <img [src]="project.coverImage" [alt]="project.name" appDisableRightClick/>
+          </div>
+          <p>{{ project.name }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<app-projectpopup [images]="selectedImages" [visible]="isModalVisible" (close)="closeModal()"></app-projectpopup>
+<app-back-to-top-button></app-back-to-top-button>
+<app-footer></app-footer>

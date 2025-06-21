@@ -1,0 +1,92 @@
+<div class="color" style="padding-top: 50px">
+  <div class="section-container">
+    <div class="section-content flex-container">
+      <div class="text-container">
+        <main class="text-content">
+          <div class="text-wrapper">
+            <h1 class="main-heading">
+              <span class="heading-part">Our Capabilities</span>
+            </h1>
+            <p class="main-description">
+              Explore our comprehensive range of solutions across physical and
+              digital spaces. Transform your vision into reality with our
+              innovative capabilities.
+            </p>
+          </div>
+        </main>
+      </div>
+      <div class="image-container">
+        <img
+          class="main-image"
+          src="https://via.placeholder.com/800x500"
+          alt="Hero"
+        />
+      </div>
+    </div>
+  </div>
+  <div class="content-wrapper">
+    <section>
+      <div class="section-header">
+        <h2>Physical Space</h2>
+        <p>We shape real-world environments that leave lasting impressions. From experience centers and interior spaces to large-scale events and expos, our work brings brands to life through immersive design and spatial storytelling.</p>
+      </div>
+      <div class="grid-container">
+        <div
+          class="grid-item"
+          *ngFor="let item of physicalSpaces"
+          (click)="openPopup(item)"
+        >
+          <div class="item-icon-container">
+            <i class="item-icon" [ngClass]="item.icon"></i>
+          </div>
+          <div class="item-content">
+            <h3>{{ item.title }}</h3>
+            <p>{{ item.description }}</p>
+            <app-butto buttonText="Know More"></app-butto>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="section-header">
+        <h2>Digital Space</h2>
+        <p>We craft engaging digital journeys that connect and inspire. From brand strategy and interactive experiences to rich film and content creation, we translate ideas into dynamic, human-centered digital solutions.</p>
+      </div>
+      <div class="grid-container">
+        <div
+          class="grid-item"
+          *ngFor="let item of digitalSpaces"
+          (click)="openPopup(item)"
+        >
+          <div class="item-icon-container">
+            <i class="item-icon" [ngClass]="item.icon"></i>
+          </div>
+          <div class="item-content">
+            <h3>{{ item.title }}</h3>
+            <p>{{ item.description }}</p>
+            <app-butto buttonText="Know More"></app-butto>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+  <div class="cta-section">
+    <h2>Ready to Transform Your Space?</h2>
+    <div class="cta-buttons">
+      <app-butto buttonText="Contact" (onClick)="navigateTo()"></app-butto>
+    </div>
+  </div>
+  <div class="modal" *ngIf="selectedItem">
+    <div class="modal-content">
+      <button class="close-icon" (click)="closePopup()">
+        <i class="fas fa-times"></i>
+      </button>
+      <h2>{{ selectedItem.title }}</h2>
+      <p>{{ selectedItem.detailedContent }}</p>
+      <app-butto buttonText="Know MOre" (click)="navigateToPage(selectedItem.page, selectedItem.title)"></app-butto>
+    </div>
+    <div class="modal-overlay" (click)="closePopup()"></div>
+  </div>
+</div>
+<app-back-to-top-button></app-back-to-top-button>
+<router-outlet></router-outlet>

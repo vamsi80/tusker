@@ -1,0 +1,49 @@
+$height: 2.8em;
+$width: 10em;
+$button-color: #ef1146;
+
+.button-container {
+  position: relative;
+  width: auto;
+  height: auto;
+  font-size: 16px;
+  z-index: 0;
+}
+
+button {
+  position: relative;
+  margin: 0;
+  cursor: pointer;
+  border: 1px solid $button-color;
+  border-radius: 5px;
+  padding: 10px 20px;
+  outline: none;
+  overflow: hidden;
+  color: $button-color;
+  background: transparent;
+  transition: color 0.3s 0.1s ease-out;
+  text-align: center;
+  font-size: inherit;
+  font-family: inherit;
+
+  &::before {
+    content: '';
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: $width * 2;
+    height: $width * 2;
+    transition: box-shadow 0.5s ease-out;
+    z-index: -1;
+  }
+
+  &:hover {
+    color: #fff;
+
+    &::before {
+      box-shadow: inset 0 0 0 $width rgba($button-color, 1);
+    }
+  }
+}

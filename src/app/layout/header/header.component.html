@@ -1,0 +1,25 @@
+<header>
+  <div class="logo">
+    <img src="/assets/logo-rh.png" alt="Logo">
+  </div>
+
+  <div class="menu-toggle" (click)="toggleMenu()">☰</div>
+
+  <nav class="navigation" [class.active]="menuActive">
+    <div class="logo-inside-nav">
+      <img src="/assets/logo-rh.png" alt="Logo">
+    </div>
+
+    <ul class="nav-links">
+      <li [class.active]="isActiveRoute('/home')"><a href="/home">Home</a></li>
+      <li [class.active]="isActiveRoute('/capabilities')"><a href="/capabilities">Capabilities</a></li>
+      <li [class.active]="isActiveRoute('/ourwork')"><a href="/ourwork">Our Work</a></li>
+      <li [class.active]="isActiveRoute('/aboutUs')"><a href="/aboutUs">About Us</a></li>
+    </ul>
+
+    <!-- Contact Us inside nav so it can move in mobile -->
+    <div class="contact-button" [class.active]="isActiveRoute('/contact')">
+      <a href="/contact">Contact Us</a>
+    </div>
+  </nav>
+</header>

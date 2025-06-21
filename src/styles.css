@@ -1,0 +1,32 @@
+@import 'animate.css/animate.min.css';
+
+@font-face {
+  font-family: 'BrandFont';
+  src: url('/assets/font/Brand.woff') format('woff'),
+    url('/assets/font/Brand.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Acumin Variable Concept';
+  src: url('/assets/font/Acumin Variable Concept.ttf') format('truetype');
+  font-weight: 100 900;
+  font-style: normal;
+}
+
+img {
+  -webkit-user-drag: none;
+  user-select: none;
+}
+
+.fade-in {
+  opacity: 1;
+  transform: translateX(-100px);
+  transition: opacity 0.2s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.animate {
+  opacity: 1;
+  transform: translateX(0);
+}
