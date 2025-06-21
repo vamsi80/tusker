@@ -109,6 +109,11 @@
   margin-bottom: 30px;
 }
 
+.item-content img {
+  width: 50px;
+  height: auto;
+}
+
 .cta-section {
   padding: 100px 20px;
   text-align: center;

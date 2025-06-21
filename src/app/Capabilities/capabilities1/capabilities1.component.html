@@ -36,10 +36,11 @@
           *ngFor="let item of physicalSpaces"
           (click)="openPopup(item)"
         >
-          <div class="item-icon-container">
+          <!-- <div class="item-icon-container">
             <i class="item-icon" [ngClass]="item.icon"></i>
-          </div>
+          </div> -->
           <div class="item-content">
+             <img [src]="item.image" [alt]="item.title" class="item-image" />
             <h3>{{ item.title }}</h3>
             <p>{{ item.description }}</p>
             <app-butto buttonText="Know More"></app-butto>
@@ -58,10 +59,11 @@
           *ngFor="let item of digitalSpaces"
           (click)="openPopup(item)"
         >
-          <div class="item-icon-container">
+          <!-- <div class="item-icon-container">
             <i class="item-icon" [ngClass]="item.icon"></i>
-          </div>
+          </div> -->
           <div class="item-content">
+             <img [src]="item.image" [alt]="item.title" class="item-image" />
             <h3>{{ item.title }}</h3>
             <p>{{ item.description }}</p>
             <app-butto buttonText="Know More"></app-butto>

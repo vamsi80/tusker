@@ -45,8 +45,9 @@
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  color: #ffffff;
+  color: #090909;
   font-family: 'Acumin Variable Concept';
+  z-index: 3;
 }
 
 .our-culture::before {
@@ -58,13 +59,14 @@
   width: 100%;
   background: linear-gradient(to bottom,
       rgba(170, 173, 180, 1) 0%,
-      rgba(170, 173, 180, 0.4) 20%,
+      rgba(170, 173, 180, 0.8) 20%,
+      rgba(170, 173, 180, 0.4) 50%,
       rgba(170, 173, 180, 0) 100%);
   z-index: 0;
 }
 
 .image-bg {
-  background-image: url('/assets/Services elephant/1.webp');
+  background-image: url('/assets/about Us/culture.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -117,7 +119,7 @@
 
 .feature img {
   width: 100%;
-  height: 180px;
+  height: 200px;
   object-fit: cover;
 }
 

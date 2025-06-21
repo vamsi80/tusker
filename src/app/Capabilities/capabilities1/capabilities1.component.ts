@@ -13,6 +13,7 @@ export class Capabilities1Component {
   physicalSpaces = [
     {
       icon: 'fas fa-building',
+      image: '/assets/icons/1.png',
       title: 'Experience Center',
       description: 'Immersive, narrative-driven environments that showcase innovation, vision, and brand purpose.',
       detailedContent:
@@ -21,6 +22,7 @@ export class Capabilities1Component {
     },
     {
       icon: 'fas fa-home',
+      image: '/assets/icons/2.png',
       title: 'Interiors',
       description: 'Thoughtfully designed branded interiors that balance function, form, and identity.',
       detailedContent:
@@ -29,6 +31,7 @@ export class Capabilities1Component {
     },
     {
       icon: 'fas fa-calendar-alt',
+      image: '/assets/icons/3.png',
       title: 'Events & Expos',
       description: 'High-impact, experiential setups that turn public events into brand-defining moments.',
       detailedContent:
@@ -40,6 +43,7 @@ export class Capabilities1Component {
   digitalSpaces = [
     {
       icon: 'fas fa-laptop-code',
+      image: '/assets/icons/4.png',
       title: 'Brand Solution',
       description: 'Strategic brand systems that drive consistency, differentiation, and emotional connection.',
       detailedContent:
@@ -48,6 +52,7 @@ export class Capabilities1Component {
     },
     {
       icon: 'fas fa-vr-cardboard',
+      image: '/assets/icons/5.png',
       title: 'Immersive & Interactive',
       description: 'Next-gen digital experiences combining motion, interaction, and spatial storytelling.',
       detailedContent:
@@ -56,6 +61,7 @@ export class Capabilities1Component {
     },
     {
       icon: 'fas fa-film',
+      image: '/assets/icons/6.png',
       title: 'Film & Content',
       description: 'Story-rich visual content designed to engage, educate, and elevate your audience.',
       detailedContent:
