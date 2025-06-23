@@ -14,10 +14,10 @@ export class CircleAnimationComponent implements OnInit {
   scaleSpeedFactor = 1;
   initialRadius = 0;
   totalFrames = 146;
-  framePath = '/assets/Home Banner for Animation/Home Banner for Animation_';
+  // framePath = '/assets/Home Banner for Animation/Home Banner for Animation_';
   images: HTMLImageElement[] = [];
   currentFrame = 0;
-  currentFrameSrc = 'assets/Home Banner for Animation/Home Banner for Animation_00000.png';
+  // currentFrameSrc = 'assets/Home Banner for Animation/Home Banner for Animation_00000.png';
   animationSpeed = 10;
   observer!: IntersectionObserver;
 
@@ -66,7 +66,7 @@ export class CircleAnimationComponent implements OnInit {
     for (let i = 0; i < 0 + this.totalFrames; i++) {
       const paddedIndex = i.toString().padStart(5, '0');
       const img = new Image();
-      img.src = `${this.framePath}${paddedIndex}.png`;
+      // img.src = `${this.framePath}${paddedIndex}.png`;
       this.images.push(img);
     }
   }
