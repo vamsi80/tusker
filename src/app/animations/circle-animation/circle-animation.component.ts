@@ -22,13 +22,13 @@ export class CircleAnimationComponent implements OnInit, AfterViewInit {
   observer!: IntersectionObserver;
 
   maxRadius = 0;
-  clipPathStyle = `circle(${this.initialRadius}px at 94.5% 91%)`;
+  clipPathStyle = `circle(${this.initialRadius}px at 92% 95%)`;
   backgroundOpacity = 1;
   expandThreshold = 0;
   holdThreshold = 0;
 
-  expansionAnchorX = 94.5;
-  expansionAnchorY = 91;
+  expansionAnchorX = 92;
+  expansionAnchorY = 90;
   scaleDownAnchorX = 50;
   scaleDownAnchorY = 50;
 

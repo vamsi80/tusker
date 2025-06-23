@@ -2,11 +2,13 @@
   <div class="move">
     <div class="background-content" [ngStyle]="{'opacity': backgroundOpacity}">
       <div class="gifvideo" #gifVideo [ngStyle]="{'visibility': hideContent ? 'hidden' : 'visible'}">
-        <div class="sequence-container" #sequenceContainer>
-          <img [src]="currentFrameSrc" alt="Sequence Frame" />
+        <div class="sequence-container">
+          <video src="https://ecgbxovmuzarmmuhyzyo.supabase.co/storage/v1/object/public/phase1/gif/Home%20Banner%20for%20Animation_2.mp4" autoplay muted playsinline class="sequence-video"></video>
         </div>
         <div class="overlay-content" [ngStyle]="{'visibility': hideContent ? 'hidden' : 'visible'}">
-          <img src="https://ecgbxovmuzarmmuhyzyo.supabase.co/storage/v1/object/public/phase1/gif/Elephant%20Video%200100_1%20.gif" alt="Centered GIF" />
+          <img
+            src="https://ecgbxovmuzarmmuhyzyo.supabase.co/storage/v1/object/public/phase1/gif/Elephant%20Video%200100_1%20.gif"
+            alt="Centered GIF" />
         </div>
       </div>
     </div>

@@ -50,6 +50,13 @@
   object-fit: cover;
 }
 
+.sequence-video {
+  padding-top: 7%;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
 .overlay-content {
   position: absolute;
   top: 0;
