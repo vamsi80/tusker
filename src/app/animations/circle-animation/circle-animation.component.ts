@@ -6,7 +6,7 @@ import { isPlatformBrowser } from '@angular/common';
   templateUrl: './circle-animation.component.html',
   styleUrls: ['./circle-animation.component.css']
 })
-export class CircleAnimationComponent implements OnInit, AfterViewInit {
+export class CircleAnimationComponent implements OnInit {
 
   isBrowser: boolean;
   lastScrollTop = 0;
@@ -56,11 +56,11 @@ export class CircleAnimationComponent implements OnInit, AfterViewInit {
     }
   }
 
-  ngAfterViewInit(): void {
-    if (this.isBrowser) {
-      this.setupObserver();
-    }
-  }
+  // ngAfterViewInit(): void {
+  //   if (this.isBrowser) {
+  //     this.setupObserver();
+  //   }
+  // }
 
   preloadImages(): void {
     for (let i = 0; i < 0 + this.totalFrames; i++) {
@@ -71,32 +71,32 @@ export class CircleAnimationComponent implements OnInit, AfterViewInit {
     }
   }
 
-  setupObserver(): void {
-    if (this.isBrowser) {
-      this.observer = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              this.playSequence();
-            }
-          });
-        },
-        { threshold: 0.5 }
-      );
-      this.observer.observe(this.sequenceContainer.nativeElement);
-    }
-  }
+  // setupObserver(): void {
+  //   if (this.isBrowser) {
+  //     this.observer = new IntersectionObserver(
+  //       (entries) => {
+  //         entries.forEach((entry) => {
+  //           if (entry.isIntersecting) {
+  //             this.playSequence();
+  //           }
+  //         });
+  //       },
+  //       { threshold: 0.5 }
+  //     );
+  //     this.observer.observe(this.sequenceContainer.nativeElement);
+  //   }
+  // }
 
-  playSequence(): void {
-    const playNextFrame = () => {
-      if (this.currentFrame < this.totalFrames) {
-        this.currentFrameSrc = this.images[this.currentFrame].src;
-        this.currentFrame++;
-        setTimeout(() => requestAnimationFrame(playNextFrame), this.animationSpeed);
-      }
-    };
-    playNextFrame();
-  }
+  // playSequence(): void {
+  //   const playNextFrame = () => {
+  //     if (this.currentFrame < this.totalFrames) {
+  //       this.currentFrameSrc = this.images[this.currentFrame].src;
+  //       this.currentFrame++;
+  //       setTimeout(() => requestAnimationFrame(playNextFrame), this.animationSpeed);
+  //     }
+  //   };
+  //   playNextFrame();
+  // }
 
   @HostListener('window:scroll', [])
   onWindowScroll() {
