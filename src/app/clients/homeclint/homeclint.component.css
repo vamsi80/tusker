@@ -17,7 +17,6 @@
 .clients-text {
   width: 40vw;
   padding: 10px;
-  /* transform: translateX(-100px); */
 }
 
 .clients-text h2 {
@@ -35,6 +34,7 @@
 .clients-logos-container {
   flex: 1;
   position: relative;
+  width: 100vw;
   overflow: hidden;
   display: flex;
   flex-direction: column;
@@ -55,17 +55,19 @@
 
 .logo-track {
   display: flex;
-  animation: scrollLeft 15s linear infinite;
+  min-width: 200%;
+  animation: scrollLeft 30s linear infinite;
 }
 
 .logo-track.reverse {
-  animation: scrollRight 15s linear infinite;
+  animation: scrollRight 30s linear infinite;
 }
 
 .logo-track img {
-  width: 150px;
+  width: 100px;
   height: 100px;
   margin: 0 20px;
+  flex-shrink: 0;
 }
 
 @keyframes scrollLeft {
@@ -73,13 +75,13 @@
     transform: translateX(0);
   }
   to {
-    transform: translateX(-50%);
+    transform: translateX(-101.1222%);
   }
 }
 
 @keyframes scrollRight {
   from {
-    transform: translateX(-50%);
+    transform: translateX(-101.1222%);
   }
   to {
     transform: translateX(0);
@@ -113,6 +115,10 @@
 
   .logos {
     gap:0px;
+  }
+
+  .logo-track {
+    animation-duration: 20s;
   }
 
   .logo-track img {
