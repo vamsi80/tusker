@@ -102,11 +102,12 @@ a {
   }
 
   .service,
-  .address,
   .logo-container {
     text-align: left;
     margin: 0 auto;
   }
+
+
 
   .subaddress {
     width: 100%;

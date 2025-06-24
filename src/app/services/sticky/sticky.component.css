@@ -88,7 +88,7 @@
 .title-side {
   width: 50%;
   align-items: flex-start;
-  font-size: 1.3rem;
+  font-size: 1.25rem;
 }
 
 .desc-side {
@@ -100,6 +100,67 @@
   font-weight: 300;
   margin-bottom: 60px;
 }
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .container {
+    padding: 40px;
+    flex-direction: column;
+  }
+
+  .left {
+    position: relative;
+    width: 100%;
+    align-items: flex-start;
+    margin-bottom: 30px;
+  }
+
+  .left h1 {
+    font-size: 2.5rem;
+    text-align: left;
+  }
+
+  .title-list {
+    display: none;
+  }
+
+  .right {
+    width: 100%;
+    margin-top: 0;
+  }
+
+  .moving-text {
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  .static-image {
+    width: 100%;
+  }
+
+  .split-content {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+  }
+
+  .title-side,
+  .desc-side {
+    width: 100%;
+  }
+
+  .title-side {
+    font-size: 1rem;
+    margin-top: -10px;
+    padding: 0;
+  }
+
+  .desc-side p {
+    font-size: 15px;
+    margin-bottom: 30px;
+    margin-top: -20px;
+  }
+}
+
 
 @media (max-width: 768px) {
   .container {

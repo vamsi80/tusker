@@ -1,7 +1,7 @@
 .all {
   font-family: 'Acumin Variable Concept';
   margin: 0;
-  padding: 40px 0;
+  padding: 30px 0;
   background-color: #aaadb4;
   overflow: hidden;
 }
@@ -10,6 +10,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin-top: 20px;
   padding: 40px;
 }
 
@@ -62,7 +63,7 @@
       rgba(170, 173, 180, 0.8) 20%,
       rgba(170, 173, 180, 0.4) 50%,
       rgba(170, 173, 180, 0) 100%);
-  z-index: 0;
+  z-index: -1;
 }
 
 .image-bg {
@@ -219,6 +220,32 @@
   font-size: 1.2rem;
   color: #00f0ff;
 }
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .our-culture {
+    flex-direction: column;
+    justify-content: center;
+    padding: 40px 20px;
+    text-align: right;
+    height: auto;
+  }
+
+  .heading {
+    width: 100%;
+    padding: 30px 20px;
+  }
+
+  .heading h1 {
+    font-size: 2.2rem;
+    text-align: center;
+  }
+
+  .heading p {
+    font-size: 16px;
+    text-align: center;
+  }
+}
+
 
 @media (max-width: 768px) {
 

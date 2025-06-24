@@ -1,71 +1,16 @@
-<section class="clients-section">
-  <div class="clients-content">
-    <div class="clients-text" appScrollAnimate animationClass="animate">
-      <h2>Our valued collaborations</h2>
-      <p>
-        We take immense pride in collaborating with some of the most innovative and trusted brands across various industries.
-        These partnerships reflect our commitment to delivering excellence and building lasting relationships.
-      </p>
-      <app-butto buttonText="Contact" (onClick)="navigateTo()"></app-butto>
-    </div>
-    <div class="clients-logos-container">
-      <div class="logos top-row">
-        <div class="logo-track">
-          <img src="/assets/svg_logo/All Pages-1.svg" alt="Client 1">
-          <img src="/assets/svg_logo/All Pages-2.svg" alt="Client 2">
-          <img src="/assets/svg_logo/All Pages-3.svg" alt="Client 3">
-          <img src="/assets/svg_logo/All Pages-4.svg" alt="Client 4">
-          <img src="/assets/svg_logo/All Pages-5.svg" alt="Client 5">
-          <img src="/assets/svg_logo/All Pages-6.svg" alt="Client 6">
-          <img src="/assets/svg_logo/All Pages-7.svg" alt="Client 7">
-          <img src="/assets/svg_logo/All Pages-8.svg" alt="Client 8">
-          <img src="/assets/svg_logo/All Pages-9.svg" alt="Client 9">
-          <img src="/assets/svg_logo/All Pages-10.svg" alt="Client 10">
-          <img src="/assets/svg_logo/All Pages-11.svg" alt="Client 11">
-        </div>
-        <div class="logo-track">
-          <img src="/assets/svg_logo/All Pages-1.svg" alt="Client 1">
-          <img src="/assets/svg_logo/All Pages-2.svg" alt="Client 2">
-          <img src="/assets/svg_logo/All Pages-3.svg" alt="Client 3">
-          <img src="/assets/svg_logo/All Pages-4.svg" alt="Client 4">
-          <img src="/assets/svg_logo/All Pages-5.svg" alt="Client 5">
-          <img src="/assets/svg_logo/All Pages-6.svg" alt="Client 6">
-          <img src="/assets/svg_logo/All Pages-7.svg" alt="Client 7">
-          <img src="/assets/svg_logo/All Pages-8.svg" alt="Client 8">
-          <img src="/assets/svg_logo/All Pages-9.svg" alt="Client 9">
-          <img src="/assets/svg_logo/All Pages-10.svg" alt="Client 10">
-          <img src="/assets/svg_logo/All Pages-11.svg" alt="Client 11">
-        </div>
-      </div>
+<section class="clients-scroll-section">
+  <h2 class="clients-title">Trusted by big industries</h2>
 
-      <div class="logos bottom-row">
-        <div class="logo-track reverse">
-          <img src="/assets/svg_logo/All Pages-12.svg" alt="Client 1">
-          <img src="/assets/svg_logo/All Pages-13.svg" alt="Client 2">
-          <img src="/assets/svg_logo/All Pages-14.svg" alt="Client 3">
-          <img src="/assets/svg_logo/All Pages-15.svg" alt="Client 4">
-          <img src="/assets/svg_logo/All Pages-16.svg" alt="Client 5">
-          <img src="/assets/svg_logo/All Pages-17.svg" alt="Client 6">
-          <img src="/assets/svg_logo/All Pages-18.svg" alt="Client 7">
-          <img src="/assets/svg_logo/All Pages-19.svg" alt="Client 8">
-          <img src="/assets/svg_logo/All Pages-20.svg" alt="Client 9">
-          <img src="/assets/svg_logo/All Pages-21.svg" alt="Client 10">
-          <img src="/assets/svg_logo/All Pages-22.svg" alt="Client 11">
-        </div>
-        <div class="logo-track reverse">
-          <img src="/assets/svg_logo/All Pages-12.svg" alt="Client 1">
-          <img src="/assets/svg_logo/All Pages-13.svg" alt="Client 2">
-          <img src="/assets/svg_logo/All Pages-14.svg" alt="Client 3">
-          <img src="/assets/svg_logo/All Pages-15.svg" alt="Client 4">
-          <img src="/assets/svg_logo/All Pages-16.svg" alt="Client 5">
-          <img src="/assets/svg_logo/All Pages-17.svg" alt="Client 6">
-          <img src="/assets/svg_logo/All Pages-18.svg" alt="Client 7">
-          <img src="/assets/svg_logo/All Pages-19.svg" alt="Client 8">
-          <img src="/assets/svg_logo/All Pages-20.svg" alt="Client 9">
-          <img src="/assets/svg_logo/All Pages-21.svg" alt="Client 10">
-          <img src="/assets/svg_logo/All Pages-22.svg" alt="Client 11">
-        </div>
-      </div>
+  <div class="logos-wrapper">
+    <div class="logos-track">
+      <ng-container *ngFor="let logo of logos">
+        <img [src]="logo" alt="Client Logo" />
+      </ng-container>
+
+      <!-- Duplicate logos for seamless loop -->
+      <ng-container *ngFor="let logo of logos">
+        <img [src]="logo" alt="Client Logo Duplicate" />
+      </ng-container>
     </div>
   </div>
 </section>

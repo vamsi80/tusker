@@ -1,129 +1,64 @@
-.clients-section {
-  display: flex;
-  align-items: center;
-  padding: 0 50px;
-  padding-bottom: 70px;
-  background-color: #aaadb4;
-  font-family: 'Acumin Variable Concept';
+.clients-scroll-section {
+  background: #aaadb4;
+  padding: 40px 0;
   overflow: hidden;
+  text-align: center;
 }
 
-.clients-content {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-}
-
-.clients-text {
-  width: 40vw;
-  padding: 10px;
-}
-
-.clients-text h2 {
+.clients-title {
   font-size: 2rem;
-  margin-bottom: 10px;
+  margin-bottom: 40px;
+  font-family: 'Acumin Variable Concept';
 }
 
-.clients-text p {
-  font-size: 18px;
-  margin-top: -5px;
-  margin-bottom: 30px;
-  color: #090909cc;
-}
-
-.clients-logos-container {
-  flex: 1;
+.logos-wrapper {
   position: relative;
-  width: 100vw;
+  width: 100%;
   overflow: hidden;
+}
+
+.logos-track {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 20px;
-  margin-top: 30px;
-  box-sizing: border-box;
-  mask-image: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 20%, rgba(0, 0, 0, 1) 80%, rgba(0, 0, 0, 0) 100%);
-  -webkit-mask-image: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 20%, rgba(0, 0, 0, 1) 80%, rgba(0, 0, 0, 0) 100%);
+  width: max-content;
+  animation: scrollLoop 50s linear infinite;
+  align-items: center;
 }
 
-.logos {
-  display: flex;
-  gap: 20px;
-  overflow: hidden;
-  white-space: nowrap;
-}
-
-.logo-track {
-  display: flex;
-  min-width: 200%;
-  animation: scrollLeft 30s linear infinite;
-}
-
-.logo-track.reverse {
-  animation: scrollRight 30s linear infinite;
-}
-
-.logo-track img {
-  width: 100px;
-  height: 100px;
-  margin: 0 20px;
+.logos-track img {
+  height: 120px;
+  margin: 0 30px;
   flex-shrink: 0;
 }
 
-@keyframes scrollLeft {
-  from {
-    transform: translateX(0);
+@keyframes scrollLoop {
+  0% {
+    transform: translateX(0%);
   }
-  to {
-    transform: translateX(-101.1222%);
+  100% {
+    transform: translateX(-50%);
   }
 }
 
-@keyframes scrollRight {
-  from {
-    transform: translateX(-101.1222%);
+@media (min-width: 769px) and (max-width: 1024px) {
+  .clients-title {
+    font-size: 1.8rem;
+    margin-bottom: 30px;
   }
-  to {
-    transform: translateX(0);
+
+  .logos-track img {
+    height: 80px;
+    margin: 0 25px;
   }
 }
+
 
 @media (max-width: 768px) {
-  .clients-section {
-    flex-direction: column;
-    padding: 0 20px;
-  }
-
-  .clients-content {
-    flex-direction: column;
-    width: 100%;
-    margin-bottom: 5vh;
-  }
-
-  .clients-text {
-    width: 100%;
-    padding: 0;
-  }
-
-  .clients-text h2 {
+  .clients-title {
     font-size: 1.5rem;
   }
 
-  .clients-text p {
-    font-size: 13px;
-  }
-
-  .logos {
-    gap:0px;
-  }
-
-  .logo-track {
-    animation-duration: 20s;
-  }
-
-  .logo-track img {
-    width: 75px;
-    height: 50px;
-    margin: 0 10px;
+  .logos-track img {
+    height: 60px;
+    margin: 0 20px;
   }
 }

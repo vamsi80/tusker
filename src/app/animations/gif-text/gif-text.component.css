@@ -120,6 +120,43 @@
   line-height: 0.5;
 }
 
+@media (min-width: 769px) and (max-width: 1024px) {
+  .gif-text-container {
+    flex-direction: column;
+    gap: 20px;
+    height: 85vh;
+  }
+
+  .gif img {
+    width: 320px;
+    height: auto;
+  }
+
+  .text {
+    text-align: center;
+    padding: 0 20px;
+  }
+
+  .big1,
+  .big2,
+  .big3 {
+    font-size: 6rem;
+  }
+
+  .medium1,
+  .medium2,
+  .medium3 {
+    font-size: 3.5rem;
+  }
+
+  .normal1,
+  .normal2,
+  .normal3 {
+    font-size: 2.2rem;
+  }
+}
+
+
 @media (max-width: 768px) {
 
   .content-section,
