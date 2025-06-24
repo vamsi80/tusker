@@ -11,7 +11,7 @@ export class StickyComponent {
     {
       title: 'Customer Experience Center',
       description: 'We bring your space to life with immersive technology and interactive installations in our Experience Center.',
-      image: 'https://ecgbxovmuzarmmuhyzyo.supabase.co/storage/v1/object/public/phase1/Projects/Experience/Johnnie%20Walker%20experience/30000%20(1).jpg'
+      image: '/assets/home_cap/1.webp'
     },
     {
       title: 'Film & Content',
@@ -21,22 +21,22 @@ export class StickyComponent {
     {
       title: 'Immersive & Interactive',
       description: 'Engages audiences with cutting-edge technologies like AR, VR, and interactive installations to deliver memorable and innovative experiences.',
-      image: 'https://ecgbxovmuzarmmuhyzyo.supabase.co/storage/v1/object/public/phase1/Projects/EVENTS/Volvo/3.jpg'
+      image: '/assets/home_cap/3.webp'
     },
     {
       title: 'Branding',
       description: 'Builds a strong and consistent identity for businesses through logos, design, messaging, and strategic marketing to connect with the target audience.',
-      image: '/assets/home_cap/image.png'
+      image: '/assets/home_cap/4.webp'
     },
     {
       title: 'Interiors',
       description: 'Specializes in crafting inspiring and functional spaces, blending aesthetics with practicality for residential, commercial, or retail environments.',
-      image: 'https://ecgbxovmuzarmmuhyzyo.supabase.co/storage/v1/object/public/phase1/Projects/BRANDING/Zebra%20Robotics/Interiors/1.jpg'
+      image: '/assets/home_cap/5.webp'
     },
     {
       title: 'Events & Expo',
       description: 'Comprehensive solutions for organizing impactful events and exhibitions, creating opportunities for networking, showcasing, and brand promotion.',
-      image: 'https://ecgbxovmuzarmmuhyzyo.supabase.co/storage/v1/object/public/phase1/Projects/EVENTS/Sunburn%202017/Sunburn1.png'
+      image: '/assets/home_cap/6.webp'
     }
   ];
 

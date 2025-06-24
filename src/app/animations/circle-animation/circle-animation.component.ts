@@ -6,7 +6,7 @@ import { isPlatformBrowser } from '@angular/common';
   templateUrl: './circle-animation.component.html',
   styleUrls: ['./circle-animation.component.css']
 })
-export class CircleAnimationComponent implements OnInit {
+export class CircleAnimationComponent implements OnInit, AfterViewInit {
 
   isBrowser: boolean;
   lastScrollTop = 0;
@@ -46,6 +46,7 @@ export class CircleAnimationComponent implements OnInit {
     }
   }
 
+  @ViewChild('videoRef') videoRef!: ElementRef<HTMLVideoElement>;
   @ViewChild('sequenceContainer', { static: true }) sequenceContainer!: ElementRef;
   @ViewChild('gifVideo', { static: true }) gifVideo!: ElementRef;
   @ViewChild('zoomTarget', { static: true }) zoomTarget!: ElementRef;
@@ -56,11 +57,31 @@ export class CircleAnimationComponent implements OnInit {
     }
   }
 
-  // ngAfterViewInit(): void {
-  //   if (this.isBrowser) {
-  //     this.setupObserver();
-  //   }
-  // }
+  ngAfterViewInit(): void {
+    if (!this.isBrowser) return;
+
+    const video = this.videoRef?.nativeElement;
+
+    // Autoplay-safe play trigger
+    if (video && video instanceof HTMLVideoElement) {
+      video.muted = true; // Redundant but safe
+      const playPromise = video.play();
+
+      if (playPromise !== undefined) {
+        playPromise
+          .then(() => {
+            console.log('Autoplay started');
+          })
+          .catch(err => {
+            console.warn('Autoplay blocked. Waiting for user interaction...');
+            document.body.addEventListener('click', () => {
+              video.play();
+            }, { once: true });
+          });
+      }
+    }
+  }
+
 
   preloadImages(): void {
     for (let i = 0; i < 0 + this.totalFrames; i++) {
