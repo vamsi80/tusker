@@ -1,5 +1,5 @@
 <div class="container">
-  <div class="left">
+  <div class="left-container">
     <h1>Offerings</h1>
     <ul class="title-list">
       <li *ngFor="let offering of offerings; let i = index" [class.active]="i === selectedIndex">
@@ -9,9 +9,21 @@
   </div>
   <div class="right">
     <div class="moving-text" *ngFor="let offering of offerings; let i = index" [id]="'text' + i">
-      <img [src]="offering.image" alt="Static Image" class="static-image" />
+      <div class="slider-wrapper">
+        <div class="slider-track" [ngStyle]="{
+      transform: 'translateX(-' + currentSlidePosition(i) + '%)',
+      transition: transitionEnabled ? 'transform 0.6s ease-in-out' : 'none'
+    }" (transitionend)="handleTransitionEnd(i)">
+          <img [src]="offering.images[offering.images.length - 1]" class="slider-image" alt="Last Clone" />
 
-       <!-- <hr class="section-divider" /> -->
+          <img *ngFor="let img of offering.images" [src]="img" class="slider-image" alt="Slide" />
+
+          <img [src]="offering.images[0]" class="slider-image" alt="First Clone" />
+        </div>
+
+        <button class="arrow left" (click)="prevSlide(i)">‹</button>
+        <button class="arrow right" (click)="nextSlide(i)">›</button>
+      </div>
 
       <div class="split-content">
         <div class="title-side">

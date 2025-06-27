@@ -19,8 +19,9 @@
 }
 
 .hero-content h1 {
-  font-size: 2.5rem;
-  line-height: 1.2;
+  font-size: var(--font-heading-xl);
+  margin: 0;
+  padding: 0;
 }
 
 .hero-content .highlight {
@@ -29,9 +30,10 @@
 }
 
 .hero-content p {
-  margin-top: 10px;
-  font-size: 18px;
+  font-size: var(--font-body);
   color: #090909;
+  margin-top: 10;
+  padding: 0;
 }
 
 .hero-image {
@@ -47,7 +49,7 @@
   align-items: center;
   justify-content: flex-end;
   color: #090909;
-  font-family: 'Acumin Variable Concept';
+  font-family:var(--font-family-acumin);
   z-index: 3;
 }
 
@@ -61,13 +63,14 @@
   background: linear-gradient(to bottom,
       rgba(170, 173, 180, 1) 0%,
       rgba(170, 173, 180, 0.8) 20%,
-      rgba(170, 173, 180, 0.4) 50%,
+      rgba(170, 173, 180, 0.6) 50%,
+      rgba(170, 173, 180, 0.3) 80%,
       rgba(170, 173, 180, 0) 100%);
   z-index: -1;
 }
 
 .image-bg {
-  background-image: url('/assets/about Us/culture.jpg');
+  background-image: url('/assets/about Us/culture.webp');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -79,16 +82,20 @@
 }
 
 .heading h1 {
-  font-size: 2.5rem;
+  font-size: var(--font-heading-xl);
   font-weight: bold;
   text-align: right;
   z-index: 2;
+  padding: 0;
+  margin: 0;
 }
 
 .heading p {
-  font-size: 18px;
+  font-size: var(--font-body);
   text-align: right;
   z-index: 2;
+  padding: 0;
+  margin-top: 10px;
 }
 
 .about-section {
@@ -130,16 +137,18 @@
 }
 
 .feature-content h2 {
-  font-size: 1.4rem;
-  margin-bottom: 0px;
+  font-size: var(--font-subtitle);
+  margin: 0;
+  padding: 0;
   font-weight: bold;
   color: #111;
 }
 
 .feature-content p {
-  font-size: 16px;
+  font-size: var(--font-body);
   color: #090909;
-  line-height: 1.2;
+  margin-top: 10;
+  padding: 0;
 }
 
 .why-choose-us {
@@ -157,16 +166,20 @@
   align-items: center;
 }
 
+.content h2 {
+  font-size: var(--font-heading-xl);
+  font-weight: bold;
+}
+
+.content p {
+  font-size: var(--font-body);
+  margin-top: 10px;
+}
+
 .subheading {
   color: #ef1146;
   font-weight: 500;
   margin-bottom: 10px;
-}
-
-.main-heading {
-  font-size: 2.5rem;
-  font-weight: 800;
-  margin: 0;
 }
 
 .main-heading span {
@@ -174,9 +187,7 @@
 }
 
 .description {
-  margin-top: 20px;
   color: #090909;
-  font-size: 18px;
 }
 
 .cards {

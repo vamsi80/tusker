@@ -6,7 +6,7 @@
 }
 
 .clients-title {
-  font-size: 2rem;
+  font-size: var(--font-heading-xl);
   margin-bottom: 40px;
   font-family: 'Acumin Variable Concept';
 }

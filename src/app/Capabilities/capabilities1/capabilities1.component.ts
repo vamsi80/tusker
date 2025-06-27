@@ -23,7 +23,7 @@ export class Capabilities1Component {
     {
       icon: 'fas fa-home',
       image: '/assets/icons/2.png',
-      title: 'Interiors',
+      title: 'Corporate Interior',
       description: 'Thoughtfully designed branded interiors that balance function, form, and identity.',
       detailedContent:
         'Our Interior solutions are focused on enhancing productivity while ensuring comfort. From ergonomic designs to aesthetic interiors, we create spaces that inspire and drive growth in the workplace.',
@@ -32,7 +32,7 @@ export class Capabilities1Component {
     {
       icon: 'fas fa-calendar-alt',
       image: '/assets/icons/3.png',
-      title: 'Events & Expos',
+      title: 'Commercial Interior',
       description: 'High-impact, experiential setups that turn public events into brand-defining moments.',
       detailedContent:
         'Event Expos provide an opportunity to showcase your brand through captivating exhibitions and memorable experiences. Our team helps design and execute events that leave a lasting impression.',
@@ -41,15 +41,6 @@ export class Capabilities1Component {
   ];
 
   digitalSpaces = [
-    {
-      icon: 'fas fa-laptop-code',
-      image: '/assets/icons/4.png',
-      title: 'Brand Solution',
-      description: 'Strategic brand systems that drive consistency, differentiation, and emotional connection.',
-      detailedContent:
-        'Our Brand Solutions help businesses establish their identity in the digital world. From logo design to online campaigns, we ensure your brand stands out and resonates with your target audience.',
-      page: '/ourwork',
-    },
     {
       icon: 'fas fa-vr-cardboard',
       image: '/assets/icons/5.png',
@@ -66,6 +57,15 @@ export class Capabilities1Component {
       description: 'Story-rich visual content designed to engage, educate, and elevate your audience.',
       detailedContent:
         'Through compelling video production and content creation, we bring your story to life. Our team crafts engaging films, advertisements, and narratives to connect with your audience emotionally.',
+      page: '/ourwork',
+    },
+    {
+      icon: 'fas fa-laptop-code',
+      image: '/assets/icons/4.png',
+      title: 'Brand Solution',
+      description: 'Strategic brand systems that drive consistency, differentiation, and emotional connection.',
+      detailedContent:
+        'Our Brand Solutions help businesses establish their identity in the digital world. From logo design to online campaigns, we ensure your brand stands out and resonates with your target audience.',
       page: '/ourwork',
     },
   ];

@@ -7,7 +7,12 @@
   font-family: 'Acumin Variable Concept';
 }
 
+h1 {
+  font-size: var(--font-subtitle);
+}
+
 a {
+  font-size: var(--font-body);
   text-decoration: none;
   color: #090909;
 }
@@ -28,7 +33,7 @@ a {
 }
 
 .logo img {
-  width: 120px;
+  width: 95px;
   height: auto;
 }
 

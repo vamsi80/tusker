@@ -15,6 +15,26 @@
   font-style: normal;
 }
 
+:root {
+  --font-heading-xl: 35px;
+  --font-heading-l: 30px;
+  --font-subtitle: 22px;
+  --font-body: 17px;
+
+  --font-family-brand: 'BrandFont';
+  --font-family-acumin: 'Acumin Variable Concept';
+}
+
+@media (max-width: 768px) {
+  :root {
+    --font-heading-xl: 28px;
+    --font-subtitle: 18px;
+    --font-body: 15px;
+  }
+}
+
+
+
 html,
 body {
   margin: 0;

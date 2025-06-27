@@ -1,0 +1,94 @@
+:host {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.space {
+  text-align: center;
+  position: relative;
+  height: 65vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #aaadb4;
+}
+
+.text-container {
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  gap: 10px;
+  width: 100%;
+  margin: 0 auto;
+  overflow-x: hidden;
+  background-color: #aaadb4;
+}
+
+.small-text p {
+  max-width: 30vw;
+  margin-right: 5vw;
+  font-size: var(--font-body);
+  font-family: var(--font-family-acumin);
+}
+
+.big-text h1 {
+  margin-left: 5vw;
+  color: black;
+  font-size: 5rem;
+  font-weight: bold;
+  line-height: 1.8ch;
+  font-family: 'BrandFont';
+  overflow: hidden;
+}
+
+@media (max-width: 768px) {
+  :host {
+    margin: 0;
+    padding: 0;
+  }
+
+  .space {
+    height: 40vh;
+  }
+
+  .text-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+    width: 100%;
+  }
+
+  .big-text {
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+  }
+
+  .big-text h1 {
+    color: black;
+    font-size: 1.8rem;
+    font-weight: bold;
+    line-height: 1.8ch;
+    overflow: hidden;
+    margin-left: 10px;
+    margin-top: 0;
+  }
+
+  .small-text {
+    width: 100%;
+    justify-content: flex-end;
+    display: flex;
+    margin-top: -20px;
+  }
+
+  .small-text p {
+    width: 75vw;
+    font-size: 13px;
+    margin-right: 10px;
+    max-width: 100%;
+  }
+}

@@ -3,14 +3,14 @@
   height: auto;
   padding: 70px;
   background-color: #AAADB4;
-  font-family: 'Acumin Variable Concept';
+  font-family: var(--font-family-acumin);
 }
 
 .container h1 {
   width: 100%;
 }
 
-.left {
+.left-container {
   flex: 0 0 25%;
   position: sticky;
   top: 0;
@@ -21,11 +21,11 @@
   height: 100vh;
 }
 
-.left h1 {
+.left-container h1 {
   width: 100%;
   text-align: left;
   margin: 0;
-  font-size: 3rem;
+  font-size: var(--font-heading-xl);
   font-weight: bold;
   margin-bottom: 20px;
 }
@@ -39,7 +39,7 @@
 
 .title-list li {
   padding: 12px 20px;
-  font-size: 1.3rem;
+  font-size: var(--font-subtitle);
   color: #444;
   border-left: 3px solid transparent;
   transition: all 0.3s;
@@ -53,7 +53,6 @@
 
 .static-image {
   width: 100%;
-  /* max-height: 60vh; */
   object-fit: cover;
   display: block;
   margin: 0;
@@ -66,13 +65,59 @@
   margin-top: 50px;
 }
 
+.slider-wrapper {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.slider-track {
+  display: flex;
+  transition: transform 0.6s ease-in-out;
+  will-change: transform;
+  width: 100%;
+}
+
+.slider-image {
+  flex: 0 0 100%;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  user-select: none;
+  pointer-events: none;
+}
+
+.arrow {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  color: #f4f4f4;
+  background: none;
+  margin-top: -22px;
+  border: none;
+  padding: 10px;
+  font-weight: bold;
+  font-size: 3rem;
+  transition: 0.6s ease;
+  background-color: none;
+  user-select: none;
+}
+
+.arrow.left {
+  left: 10px;
+}
+
+.arrow.right {
+  right: 10px;
+}
+
 .moving-text {
   text-align: left;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  font-family: 'Acumin Variable Concept';
   margin-top: 80px;
 }
 
@@ -88,7 +133,7 @@
 .title-side {
   width: 50%;
   align-items: flex-start;
-  font-size: 1.25rem;
+  font-size: var(--font-body);
 }
 
 .desc-side {
@@ -96,8 +141,7 @@
 }
 
 .desc-side p {
-  font-size: 18px;
-  font-weight: 300;
+  font-size: var(--font-body);
   margin-bottom: 60px;
 }
 

@@ -5,7 +5,7 @@
 }
 
 body {
-  font-family: 'Acumin Variable Concept';
+  font-family: var(--font-family-acumin);
   color: #090909;
 }
 
@@ -22,20 +22,20 @@ header {
   padding: 40px;
   height: 50vh;
   padding-bottom: 0;
-  font-family: 'Acumin Variable Concept';
+  font-family: var(--font-family-acumin);
 }
 
 header h1 {
-  font-size: 2rem;
+  font-size: var(--font-heading-xl);
   color: #090909;
+  margin-bottom: 10px;
 }
 
 header p {
   color: #090909cc;
-  font-size: 18px;
+  font-size: var(--font-body);
   max-width: 600px;
   margin: 0;
-  line-height: 1.5;
 }
 
 nav {

@@ -1,9 +1,9 @@
 .back-to-top {
   position: fixed;
   bottom: 40px;
-  left: 50%;
-  width: 50px;
-  height: 50px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
   background-color: #ef1146;
   color: #fff;
   border: none;

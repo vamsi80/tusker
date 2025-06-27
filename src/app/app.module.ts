@@ -15,7 +15,7 @@ import { CursorComponent } from './animations/cursor/cursor.component';
 import { ExperienceComponent } from './experience/experience.component';
 import { ParticalsComponent } from './particals/particals.component';
 import { GifTextComponent } from './animations/gif-text/gif-text.component';
-import { TextComponent } from './about/about/text.component';
+import { TextComponent } from './about/text/text.component';
 import { ProjectpopupComponent } from './projectpopup/projectpopup.component';
 import { ClientLogoComponent } from './clients/client-logo/client-logo.component';
 import { HeaderComponent } from './layout/header/header.component';
