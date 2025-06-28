@@ -1,5 +1,6 @@
 import { isPlatformBrowser } from '@angular/common';
 import { Component, Inject, PLATFORM_ID } from '@angular/core';
+import { homeOffrings } from '../../constants/media.constants';
 
 @Component({
   selector: 'app-sticky',
@@ -8,60 +9,12 @@ import { Component, Inject, PLATFORM_ID } from '@angular/core';
 })
 export class StickyComponent {
   offerings = [
-    {
-      title: 'Customer Experience Center',
-      description: 'We bring your space to life with immersive technology and interactive installations in our Experience Center.',
-      images: [
-        '/assets/home_cap/1.webp',
-        '/assets/home_cap/1-1.webp',
-        '/assets/home_cap/1-2.webp'
-      ]
-    },
-    {
-      title: 'Film & Content',
-      description: 'Focuses on creating high-quality visual storytelling through videos, advertisements, and multimedia content to enhance brand communication.',
-      images: [
-        '/assets/Services elephant/1.webp',
-        '/assets/Services elephant/1.webp',
-        '/assets/Services elephant/1.webp'
-      ]
-    },
-    {
-      title: 'Immersive & Interactive',
-      description: 'Engages audiences with cutting-edge technologies like AR, VR, and interactive installations to deliver memorable and innovative experiences.',
-      images: [
-        '/assets/home_cap/3.webp',
-        '/assets/home_cap/3.webp',
-        '/assets/home_cap/3.webp'
-      ]
-    },
-    {
-      title: 'Branding',
-      description: 'Builds a strong and consistent identity for businesses through logos, design, messaging, and strategic marketing to connect with the target audience.',
-      images: [
-        '/assets/home_cap/4.webp',
-        '/assets/home_cap/4.webp',
-        '/assets/home_cap/4.webp'
-      ]
-    },
-    {
-      title: 'Corporate Interior',
-      description: 'Specializes in crafting inspiring and functional spaces, blending aesthetics with practicality for residential, commercial, or retail environments.',
-      images: [
-        '/assets/home_cap/5.webp',
-        '/assets/home_cap/5.webp',
-        '/assets/home_cap/5.webp'
-      ]
-    },
-    {
-      title: 'Commercial Interior',
-      description: 'Comprehensive solutions for organizing impactful events and exhibitions, creating opportunities for networking, showcasing, and brand promotion.',
-      images: [
-        '/assets/home_cap/6.webp',
-        '/assets/home_cap/6.webp',
-        '/assets/home_cap/6.webp'
-      ]
-    }
+    homeOffrings.Customer_Experience_Center,
+    homeOffrings.Film_Content,
+    homeOffrings.Immersive_Interactive,
+    homeOffrings.Branding,
+    homeOffrings.Corporate_Interior,
+    homeOffrings.Commercial_Interior
   ];
 
   private intervals: any[] = [];
@@ -96,22 +49,19 @@ export class StickyComponent {
     this.transitionEnabled = true;
     this.currentSlideIndexes[i]++;
 
-    // if reached last clone
     if (this.currentSlideIndexes[i] > totalSlides) {
       setTimeout(() => {
         this.transitionEnabled = false;
-        this.currentSlideIndexes[i] = 1; // jump back to real first
+        this.currentSlideIndexes[i] = 1;
       }, 600);
     }
   }
 
-  // Reverse slide
   prevSlide(i: number) {
     const totalSlides = this.offerings[i].images.length;
     this.transitionEnabled = true;
     this.currentSlideIndexes[i]--;
 
-    // if reached first clone
     if (this.currentSlideIndexes[i] === 0) {
       setTimeout(() => {
         this.transitionEnabled = false;
@@ -120,12 +70,10 @@ export class StickyComponent {
     }
   }
 
-  // Calculate translateX
   currentSlidePosition(i: number): number {
     return this.currentSlideIndexes[i] * 100;
   }
 
-  // optional to re-enable transition (for good measure)
   handleTransitionEnd(i: number) {
     this.transitionEnabled = true;
   }
